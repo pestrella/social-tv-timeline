@@ -12,6 +12,10 @@ background-position: left top;
 }
 
 #lane-viewport {
+color: #333;
+background-image: url(../images/dark-pattern-bg-body.png);
+background-repeat: repeat;
+background-position: left top;
 overflow: hidden;
 position: relative;
 z-index: 1;
@@ -110,11 +114,11 @@ margin: 0 5px;
 }
 
 .memo .memoContent.fixed-photo-height, .memo .fixed-photo-height {
-height: 150px;
+height: 80px;
 }
 
 .memo .memoContent.fixed-photo-height, .memo .fixed-photo-height {
-height: 150px;
+height: 80px;
 }
 
 .memoContent {
