@@ -10,6 +10,9 @@ $(document).ready(function() {
     success: function(player) {
       console.log('playing: ' + player.src);
       logTime(player);
+      /* TODO: requires callback which moves the timeline
+       * e.g. timeline.moveTo(player.currentTime);
+       */
     }
   });
 });
