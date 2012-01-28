@@ -1,14 +1,19 @@
 
 @import url(http://fonts.googleapis.com/css?family=Chango);
 
+.content
+{
+margin-top: 25px;
+}
+
 .topbar.footer {
-height: 100px;
+height: 160px;
 bottom: 0;
 top: auto;
 }
 
 .topbar.footer .fill {
-    height: 95px;
+    height: 100%;
     border-top: 2px solid #c3c3c3;
 }
 
@@ -64,11 +69,6 @@ background-image:url(../images/150x150_more.gif);
 
 .more-background-back {
 background-image:url(../images/back_150x150.gif);
-}
-
-.content
-{
-margin-top: 80px;
 }
 
 .container-fluid {
