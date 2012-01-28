@@ -1,20 +1,27 @@
 
 @import url(http://fonts.googleapis.com/css?family=Chango);
 
+html {
+background-color: #0D0D0D;
+}
+
+body {
+background-color: #0D0D0D;
+}
+
 .content
 {
 margin-top: 5px;
 }
 
 .topbar.footer {
-height: 190px;
+height: 280px;
 bottom: 0;
 top: auto;
 }
 
 .topbar.footer .fill {
     height: 100%;
-    border-top: 2px solid #c3c3c3;
 }
 
 .topbar.footer .fill.dark {
