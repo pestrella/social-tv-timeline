@@ -10,7 +10,11 @@
   <body>
     <p>Sample video</p>
     <video width="640" height="360" src="" type="video/mp4" id="player" poster="http://g.bbcredux.com/programme/5653745484047358487/download/image-640.jpg" controls="controls" preload="none">
-      <source type="video/mp4" src="http://rws2012:rewired TV@devapi.bbcredux.com/programme/bbchd/2011-09-18/18-00-00/media/mp4-hi/arbitrary-name.mp4" />
+      <source type="video/mp4" src="http://rws2012:rewired TV@devapi.bbcredux.com/programme/bbchd/2011-09-18/18-00-00/media/mp4-hi/arbitrary-name.mp4"/>
+      <object width="640" height="360" type="application/x-shockwave-flash" data="media/flashmediaelement.swf">
+        <param name="movie" value="media/flashmediaelement.swf"/>
+        <param name="flashvars" value="controls=true&amp;file=http://rws2012:rewired TV@devapi.bbcredux.com/programme/bbchd/2011-09-18/18-00-00/media/mp4-hi/arbitrary-name.mp4"/>
+        <img src="images/echo-hereweare.jpg" width="640" height="360" alt="Non HTML-5 browser with no flash player installed" title="No flash player"/>
     </video>
   </body>
 </html>
