@@ -9,7 +9,7 @@ $(document).ready(function() {
   $('video').mediaelementplayer({
     success: function(player) {
       console.log('playing: ' + player.src);
-      logTime(player);
+      //logTime(player);
       /* TODO: requires callback which moves the timeline
        * e.g. timeline.moveTo(player.currentTime);
        */
