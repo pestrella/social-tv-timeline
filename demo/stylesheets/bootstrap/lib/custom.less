@@ -1,0 +1,71 @@
+
+// Colors
+@primaryColor:		#1C94C4;
+@secondaryColor: 	#EB8F00;
+
+// Links
+@linkColor:         @primaryColor;
+@linkColorHover:	@secondaryColor;
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: lighten(@grayDark, 10%);
+}
+  
+// Buttons
+.btn {  
+  &.primary {
+  	color: @primaryColor;
+    .btnColor(#F6F6F6, #F6F6F6);
+    &:hover {
+      .btnColor(#FDF5CE, #FDF5CE);
+      color: @secondaryColor;
+      border-color: #FBCB09;
+  	}
+  }
+}
+
+// Topbar
+.topbar {
+  .fill {
+    background: #f9f9f9;
+  }
+  
+  a {
+    color: @primaryColor;
+    text-shadow: none;
+  }
+  
+  a:hover,
+  ul li.active a {
+    color: @secondaryColor;
+  }
+  
+  h3 {
+    a {
+      color: @primaryColor;
+      text-shadow: none;
+    }
+  }
+  
+  ul {
+  	li {
+  	  a {
+        &:hover {
+          color: @secondaryColor;
+        }        
+      }
+      &.active a {
+        background-color: #f5f5f5;
+        background-color: rgba(0,0,0,.04);
+      }
+  	}
+  }
+  
+}
+
+// Page Headers
+.hero-unit {
+  background-color: #f9f9f9;
+}

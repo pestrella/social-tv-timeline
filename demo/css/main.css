@@ -1,0 +1,115 @@
+
+@import url(http://fonts.googleapis.com/css?family=Chango);
+
+.media-grid {
+    margin-bottom: 0;
+    margin-left: -20px;
+}
+.media-grid:before, .media-grid:after {
+    content: "";
+    display: table;
+}
+.media-grid:after {
+    clear: both;
+}
+.media-grid li {
+    display: inline;
+}
+.media-grid a {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    float: left;
+    margin: 0 0 30px 30px;
+    padding: 4px;
+    text-decoration: none;
+}
+.media-grid a img {
+    display: block;
+}
+.media-grid a:hover {
+    border-color: #0069D6;
+    box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+.grid-image {
+width:150px;
+height:150px;
+}
+
+.grid-image font{
+font-family: 'Lucida Grande','Lucida Sans Unicode',Arial;
+margin: 0 2px;
+font-size: 16px;
+color: #fff;
+}
+
+.more-background {
+background-image:url(../images/150x150_more.gif);
+}
+
+.more-background-back {
+background-image:url(../images/back_150x150.gif);
+}
+
+.content
+{
+margin-top: 80px;
+}
+
+.container-fluid {
+    min-width: 940px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+.container-fluid:before, .container-fluid:after {
+    content: "";
+    display: table;
+}
+.container-fluid:after {
+    clear: both;
+}
+.container-fluid > .sidebar {
+    float: left;
+    width: 220px;
+}
+.container-fluid > .content {
+    margin-left: 240px;
+}
+
+
+
+.container.container-top {
+	margin-top: 40px;
+}
+
+.page-leftborder {
+	border-left: 1px solid #C3C3C3;
+	height: 620px;
+}
+
+.topbar h3 a {
+    font-family: 'Chango', cursive;
+}
+
+.page-topborder {
+	border-top: 1px solid #C3C3C3;
+	width: 480px;
+}
+
+.page-box-half {
+	height: 310px;
+	padding: 10px 0 0 10px;
+}
+
+.nav a.icon {
+	padding: 6px 10px 4px 10px;
+}
+
+.page-header-top {
+	margin-top: 20px;
+}
+
+
+
