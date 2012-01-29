@@ -32,7 +32,9 @@ $(document).ready(function() {
           .animate({left: -1 * timelineRemainder}, {duration: videoRemainder * 1000});
       });
 
+      var playing = false;
       player.addEventListener('play', function(event) {
+        playing = true;
         console.log('play >');
         //var videoLength = player.duration;
         var videoLength = 866; //sec, hardcoded lenght! don't change the video :)
@@ -58,7 +60,47 @@ $(document).ready(function() {
              }
            });
 
-      })
+      });
+
+      player.addEventListener('pause', function(event) {
+        playing = false;
+      });
+
+      $('#memo-1').click(function() {
+        if (!playing) {
+          player.play();
+        }
+        player.setCurrentTime(0);          
+      });
+
+      $('#memo-2').click(function() {
+        if (!playing) {
+          player.play();
+        }
+        player.setCurrentTime(134.16);          
+      });
+
+      $('#memo-3').click(function() {
+        if (!playing) {
+          player.play();
+        }
+        player.setCurrentTime(219.3);          
+      });
+
+      $('#memo-4').click(function() {
+        if (!playing) {
+          player.play();
+        }
+        player.setCurrentTime(438.6);          
+      });
+
+      $('#memo-5').click(function() {
+        if (!playing) {
+          player.play();
+        }
+        player.setCurrentTime(564.16);          
+      });
+
     }
   });
 });
