@@ -26,7 +26,9 @@ $(document).ready(function() {
         var videoRemainder = Math.round(videoLength - elapsed);
         console.log('must scroll ' + videoRemainder + 'secs of timeline');
 
-        $('#lane')
+        var node = $('#lane');
+        console.log(node);
+        node
           .stop()
           .animate({left: -1 * seekPosition}, {duration: 500})
           .animate({left: -1 * timelineRemainder}, {duration: videoRemainder * 1000});
