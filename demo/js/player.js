@@ -1,13 +1,9 @@
 $(document).ready(function() {
   console.log('ready...');
-  var logTime = function(player) {
-    var timeInterval = setInterval(function() {
-      console.log('> ' + player.currentTime);
-    }, 5000);
-  }
 
   var timelineScrolling = function(player) {
     var timeInterval = setInterval(function() {
+      console.log('length: ' + player.duration);
       console.log('move it!');
       $('#lane').animate({"left": "-=20px"}, "slow");
     }, 5000);
@@ -16,11 +12,25 @@ $(document).ready(function() {
   $('video').mediaelementplayer({
     success: function(player) {
       console.log('playing: ' + player.src);
-      //logTime(player);
-      /* TODO: requires callback which moves the timeline
-       * e.g. timeline.moveTo(player.currentTime);
-       */
-      timelineScrolling(player);
+      //timelineScrolling(player);
+
+      player.addEventListener('seeked', function(event) {
+        //console.log('you seeked!');
+        var videoLength = player.duration;
+        var elapsed = player.currentTime;
+        var timelineWidth = $('#lane').width();
+        var seekPosition = Math.round((elapsed / videoLength) * timelineWidth);
+        console.log('seek position: ' + seekPosition);
+
+        var timelineRemainder = timelineWidth - seekPosition;
+        var videoRemainder = Math.round(videoLength - elapsed);
+        console.log('must scroll ' + videoRemainder + 'secs of timeline');
+
+        $('#lane')
+          .stop()
+          .animate({left: -1 * seekPosition}, {duration: 500})
+          .animate({left: -1 * timelineRemainder}, {duration: videoRemainder * 1000});
+      });
     }
   });
 });
