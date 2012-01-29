@@ -62,6 +62,7 @@
     <meta name="viewport" content="width=1000, user-scalable=yes" />
 
     <script src="js/player.js" type="text/javascript"></script>
+    <script src="js/filter.js" type="text/javascript"></script>
 
   </head>
   <body>		
@@ -74,10 +75,11 @@
     			<li class="dropdown">
 	              <a href="#" class="dropdown-toggle">Filter By</a>
 	              <ul class="dropdown-menu">
-	              	<li><a href="#">Informational</a></li>
+	              	<li><a id="filter-showall" href="javascritp:void(0)">Show All</a></li>
 	              	<li class="divider"></li>
-	                <li><a href="#">Your Friends</a></li>
-	                <li><a href="#">Editor&apos;s Pick</a></li>
+	              	<li><a id="filter-info" href="javascritp:void(0)">Informational</a></li>	              	
+	                <li><a id="filter-friends" href="javascritp:void(0)">Your Friends</a></li>
+	                <li><a id="filter-editor" href="javascritp:void(0)">Editor&apos;s Pick</a></li>
 	              </ul>
 	            </li>
     		</ul>
@@ -110,9 +112,9 @@
 
 	    <div id="lane" data-lane-id="t8gqrmzsbd64s519urkho4ofe3le9o8x" data-lane-title="Personal Lane" data-lane-description="A personal lane containing all your content." data-user-id="1f09d08636818854b1c1ccf907470305" style="width: 2000px; position: absolute;">
 
-			<div class="lane-slot" id="1253491200">
+			<div class="lane-slot info" id="1253491200">
 				<div class="lane-circle"></div>
-				<div class="lane-slot-title">00:02</div>
+				<div class="lane-slot-title"><span>00:02</span></div>
 				<div class="lane-slot-memos isotope" style="position: relative; height: 280px; width: 420px; overflow-x: hidden; overflow-y: hidden; ">
 					
 					<div id="1f09d08636818854b1c1ccf907470305flickr50573844N003942047150" class="memo flickr isotope-item" data-time="1253531956" style="position: absolute; left: 20px; top: 20px; cursor: pointer; ">
@@ -137,9 +139,9 @@
 				</div>
 			</div>
 			
-			<div class="lane-slot" id="1247875200">
+			<div class="lane-slot friends" id="1247875200">
 				<div class="lane-circle"></div>
-				<div class="lane-slot-title">03:12</div>
+				<div class="lane-slot-title"><span>03:12</span></div>
 				
 				<div class="lane-slot-memos isotope" style="position: relative; height: 280px; width: 220px; overflow-x: hidden; overflow-y: hidden; ">
 					
@@ -167,9 +169,9 @@
 			</div>
 
 
-			<div class="lane-slot" id="1247875200">
+			<div class="lane-slot editor" id="1247875200">
 				<div class="lane-circle"></div>
-				<div class="lane-slot-title">05:10</div>
+				<div class="lane-slot-title"><span>05:10</span></div>
 				
 				<div class="lane-slot-memos isotope" style="position: relative; height: 280px; width: 220px; overflow-x: hidden; overflow-y: hidden; ">					
 
@@ -197,9 +199,9 @@
 			</div>
 
 
-			<div class="lane-slot" id="1247875200">
+			<div class="lane-slot info" id="1247875200">
 				<div class="lane-circle"></div>
-				<div class="lane-slot-title">10:20</div>
+				<div class="lane-slot-title"><span>10:20</span></div>
 				
 				<div class="lane-slot-memos isotope" style="position: relative; height: 280px; width: 440px; overflow-x: hidden; overflow-y: hidden; ">					
 
@@ -234,9 +236,9 @@
 
 			</div>
 
-			<div class="lane-slot" id="1247875200">
+			<div class="lane-slot friends" id="1247875200">
 				<div class="lane-circle"></div>
-				<div class="lane-slot-title">13:12</div>
+				<div class="lane-slot-title"><span>13:12</span></div>
 				
 				<div class="lane-slot-memos isotope" style="position: relative; height: 280px; width: 500px; overflow-x: hidden; overflow-y: hidden; ">
 					
