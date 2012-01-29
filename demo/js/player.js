@@ -33,6 +33,17 @@ $(document).ready(function() {
           .animate({left: -1 * seekPosition}, {duration: 500})
           .animate({left: -1 * timelineRemainder}, {duration: videoRemainder * 1000});
       });
+    },
+    play: function(player) {
+      console.log('start.');
+      var videoLength = player.duration;
+      var elapsed = player.currentTime;
+      var timelineWidth = $('#lane').width();
+
+      var timelineRemainder = timelineWidth - seekPosition;
+      var videoRemainder = Math.round(videoLength - elapsed);
+
+      $('#lane').stop().animate({left: -1 * timelineRemainder}, {duration: videoRemainder * 1000});
     }
   });
 });
