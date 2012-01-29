@@ -1,14 +1,10 @@
 
-body, select, input, textarea, button {
-color: #333;
-font-size: 12px;
-font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
-}
-
-body {
-background-image: url(../images/dark-pattern-bg-body.png);
-background-repeat: repeat;
-background-position: left top;
+div.pane {
+clear: left;
+margin: 0 0 0 10px;
+position: relative;
+width: 940px;
+height: 280px;
 }
 
 #lane-viewport {
@@ -16,8 +12,9 @@ color: #333;
 background-image: url(../images/dark-pattern-bg-body.png);
 background-repeat: repeat;
 background-position: left top;
-overflow: hidden;
 position: relative;
+overflow: auto;
+overflow-y: hidden;
 z-index: 1;
 visibility: hidden;
 }
@@ -40,17 +37,18 @@ background-color: #C1C1C1;
 -moz-border-radius: 15px;
 border-radius: 15px;
 top: 22px;
-left: -3px;
+left: 42px;
 z-index: 10000000000000000000000000;
 }
 
 .lane-slot:first-child .lane-slot-title {
-padding-left: 5px;
+/*padding-left: 5px;*/
 }
 
 .lane-slot-title {
 height: 21px;
 padding-top: 4px;
+padding-left: 32px;
 border-bottom: 1px solid #444;
 -moz-box-shadow: inset 0 -1px 0 0 #000;
 -webkit-box-shadow: inset 0 -1px 0 0 #000;
@@ -63,15 +61,16 @@ letter-spacing: 0;
 .lane-slot-memos {
 padding: 20px 20px 0 20px;
 /*border-left: 1px solid black;*/
--moz-box-shadow: inset 1px 0 0 0 #444;
+/*-moz-box-shadow: inset 1px 0 0 0 #444;
 -webkit-box-shadow: inset 1px 0 0 0 #444;
 box-shadow: inset 1px 0 0 0 #444;
+*/
 }
 
 .memo {
 width: 200px;
 margin: 0 20px 20px 0;
-overflow: hidden;
+/*overflow: hidden;*/
 background: white;
 color: #333;
 cursor: pointer;
@@ -82,10 +81,23 @@ font-size: 15px;
 box-shadow: 0 2px 2px 1px #000;
 }
 
+.arrowUp {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #FFFFFF;
+	width: 0;
+	top: -9px;
+	left: 15px;
+	display:block;
+  	position:absolute;
+}
+
 .memoTitleBar {
 height: 25px;
+padding-top: 5px;
+padding-left: 10px;
 overflow: hidden;
-margin-top: 5px;
+margin-top: 0;
 border-bottom: 1px solid #DDD;
 }
 
@@ -114,11 +126,7 @@ margin: 0 5px;
 }
 
 .memo .memoContent.fixed-photo-height, .memo .fixed-photo-height {
-height: 80px;
-}
-
-.memo .memoContent.fixed-photo-height, .memo .fixed-photo-height {
-height: 80px;
+height: 180px;
 }
 
 .memoContent {
@@ -126,15 +134,47 @@ overflow: hidden;
 position: relative;
 }
 
+/*
 .memoContent img {
 display: block;
 margin: 0 auto 0 auto;
 max-width: 200px;
 }
+*/
+
+.memoContent .wrap {
+  /* force the div to properly contain the floated images: */
+  position:relative;
+  float:left;  
+  clear:none;
+  padding-left: 15px;
+  overflow:hidden;  
+}
+.memoContent .wrap img {
+  position:relative;
+  z-index:1;
+  max-width: 170px;
+}
+.memoContent .wrap .desc {
+  display:block;
+  position:absolute;
+  width:90%;
+  height:68px;
+  bottom:48px;  
+  left:15px;
+  z-index:2;
+  text-align:left;
+  font-size: 11px;
+  padding: 5px;
+  color: #FFFFFF;
+  background-color: rgba(0,0,0,0.7);
+  line-height: 12px;
+}
 
 .memoFooterBar {
-min-height: 26px;
-background: #E5E5E5 url(../images/sm-memo-bottom.png) no-repeat left top;
+min-height: 5px;
+background-color: #E5E5E5;
+border-top: 1px solid #C3C3C3;
 overflow: hidden;
 border-radius: 0 0 5px 5px;
 }

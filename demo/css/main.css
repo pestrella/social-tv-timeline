@@ -1,20 +1,42 @@
 
 @import url(http://fonts.googleapis.com/css?family=Chango);
 
+html {
+background-color: #0D0D0D;
+}
+
+body {
+background-color: #0D0D0D;
+}
+
 .content
 {
 margin-top: 5px;
 }
 
 .topbar.footer {
-height: 190px;
+height: 310px;
 bottom: 0;
 top: auto;
 }
 
 .topbar.footer .fill {
     height: 100%;
-    border-top: 2px solid #c3c3c3;
+}
+
+.topbar.footer .fill.menu {
+    height: 39px;
+
+    border-top: 1px solid #1D1D1D;
+
+    /* default background colour, for all layout engines that don't implement gradients */
+    background: #000000;
+
+    /* gecko based browsers */
+    background: -moz-linear-gradient(top, #0D0D0D, #000000);
+
+    /* webkit based browsers */
+    background: -webkit-gradient(linear, left top, left bottom, from(#0D0D0D), to(#000000));
 }
 
 .topbar.footer .fill.dark {
@@ -113,6 +135,11 @@ background-image:url(../images/back_150x150.gif);
 
 .topbar h3 a {
     font-family: 'Chango', cursive;
+}
+
+.dropdown-toggle {
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .page-topborder {
