@@ -12,6 +12,7 @@ $(document).ready(function() {
 		$('div.lane-slot.friends .lane-slot-memos .memo').show();
 		$('div.lane-slot.editor .lane-slot-memos .memo').show();
 	});
+	
 	$('#filter-info').click(function() {
 		$('div.lane-slot.info .lane-circle').show();
 		$('div.lane-slot.friends .lane-circle').hide();

@@ -66,20 +66,32 @@ $(document).ready(function() {
         playing = false;
       });
 
+      /*
+      var ua = navigator.userAgent,
+          event = (ua.match(/iPad/i)) ? "touchstart" : "click";
+
+      $("memo-2").bind(event, function(e) {
+        alert('test');
+        if (!playing) {
+          player.play();
+        }
+        player.setCurrentTime(134.16);
+      });
+      */
+
       $('#memo-1').click(function() {
         if (!playing) {
           player.play();
         }
         player.setCurrentTime(0);          
       });
-
       $('#memo-2').click(function() {
         if (!playing) {
           player.play();
         }
-        player.setCurrentTime(134.16);          
+        player.setCurrentTime(134.16);
       });
-
+      
       $('#memo-3').click(function() {
         if (!playing) {
           player.play();
@@ -103,4 +115,6 @@ $(document).ready(function() {
 
     }
   });
+
+
 });
